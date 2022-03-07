@@ -24,6 +24,10 @@ class MyReceiver : BroadcastReceiver() {
                 val text = intent.getStringExtra(EXTRA_TEXT)
                 Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
             }
+            "loaded" -> {
+                val percent = intent.getIntExtra("percent", 0)
+                Toast.makeText(context, "Loaded: $percent", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
